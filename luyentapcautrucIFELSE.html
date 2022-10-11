@@ -4,34 +4,97 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<!--Viết chương trình kiểm tra đăng nhập hệ thống của người dùng theo yêu cầu sau-->
 
-<!--Yêu cầu người dùng nhập tên từ bàn phím.-->
-
-<!--Nếu tên nhập vào là Admin thì yêu cầu nhập mật khẩu.-->
-<!--Nếu mật khẩu là TheMaster thì in ra chuỗi Welcome.-->
-<!--Nếu mật khẩu nhập vào là null in ra chuỗi Canceled.-->
-<!--Còn lại in ra chuỗi Wrong password.-->
-<!--Nếu tên nhập vào là null in ra chuỗi canceld.-->
-<!--Còn lại in ra chuỗi “I don’t know you"-->
 <body>
 <script>
-    let userName = prompt("Who's there?", '');
-    if(userName=='admin'){
-        let pass = prompt('Password?','' );
-        if(pass='TheMaster'){
-            alert('Welcome');
-        } else if(pass=='null'){
-            alert('Canceled');
-            }else {
-            alert('Wrong password')
-        }
-    }else if(userName==null){
-        alert('canceld')
+    // Viết chương trình kiểm tra đăng nhập hệ thống của người dùng theo yêu cầu sau
+    //
+    // Yêu cầu người dùng nhập tên từ bàn phím.
+    //
+    //     Nếu tên nhập vào là Admin thì yêu cầu nhập mật khẩu.
+    //     Nếu mật khẩu là TheMaster thì in ra chuỗi Welcome.
+    //     Nếu mật khẩu nhập vào là null in ra chuỗi Canceled.
+    //     Còn lại in ra chuỗi Wrong password.
+    //     Nếu tên nhập vào là null in ra chuỗi canceld.
+    //     Còn lại in ra chuỗi “I don’t know you"
+    // let userName = prompt("Who's there?", '');
+    // if(userName=='admin'){
+    //     let pass = prompt('Password?','' );
+    //     if(pass='TheMaster'){
+    //         alert('Welcome');
+    //     } else if(pass=='null'){
+    //         alert('Canceled');
+    //         }else {
+    //         alert('Wrong password')
+    //     }
+    // }else if(userName==null){
+    //     alert('canceld')
+    //
+    // }else {
+    //     alert('I don’t know you')
+    // }
 
-    }else {
-        alert('I don’t know you')
+    //Bài 2: Viết lại cấu trúc if sau thành cấu trúc switch
+
+    //Đây là cấu trúc IF-ELSE
+    // let a = prompt('a?', '');
+    //
+    // if (a == 0) {
+    //     alert(0);
+    // }
+    //
+    // if (a == 1) {
+    //     alert(1);
+    // }
+    //
+    // if (a == 2 || a == 3) {
+    //     alert('2,3');
+    // }
+
+    //Chuyển sang switchcase
+
+    // let a = +prompt('a?', '');
+    // switch (a){
+    //     case 0:
+    //         alert(0);
+    //         break;
+    //     case 1:
+    //         alert(1);
+    //         break;
+    //     case 2:
+    //     case 3:
+    //         alert('2,3');
+    //         break;
+    // }
+
+    // //Bài 3: Sử dụng cấu trúc if…else, nhập vào một số, kiểm tra giá trị của số nhập vào
+    // Nếu số đó lớn hơn 0 hiển thị 1
+    //
+    // Còn lại nếu số đó nhỏ hơn 0 thì hiển thị -1
+    //
+    // Còn lại hiển thị 0
+
+    // let value = prompt('Type a number', 0)
+    // if(value>0){
+    //     alert(1)
+    // }else if(value<0){
+    //     alert(-1)
+    // }else {
+    //     alert(0)
+    // }
+
+    let value = prompt('Type a number', 0)
+    switch ((value>0) ? 1 :(value<0) ? -1: 0){
+        case 1:
+            alert(1);
+            break;
+        case -1:
+            alert(-1)
+            break;
+        case 0 :
+            alert(0)
     }
+
 </script>
 
 </body>
